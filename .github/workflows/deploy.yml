@@ -16,8 +16,8 @@ jobs:
           username: etudiant
           port: 23043
           key: ${{ secrets.VPS_SSH_KEY }}
-          script: |
+         script: |
             cd ~/examen_final
             git pull origin main
-            bun run build
+            /home/etudiant/.bun/bin/bun run build
             sudo systemctl restart webclients
